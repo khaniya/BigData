@@ -1,0 +1,11 @@
+hadoop fs -mkdir /user/cloudera/pairalgorithm /user/cloudera/pairapproach/input
+
+hadoop fs -mkdir /user/cloudera/pairalgorithm/output
+
+hadoop fs -put /home/cloudera/Desktop/data.txt /user/cloudera/pairalgorithm/input/
+
+hadoop jar /home/cloudera/Desktop/Pair.jar pairalgorithm.PairAlgthm /user/cloudera/pairalgorithm/input /user/cloudera/pairalgorithm/output/
+
+hadoop fs -ls /user/cloudera/pairalgorithm/output
+
+hadoop fs -cat /user/cloudera/pairalgorithm/output/*

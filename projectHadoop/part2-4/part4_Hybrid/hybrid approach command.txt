@@ -1,0 +1,11 @@
+hadoop fs -mkdir /user/cloudera/hybrid /user/cloudera/hybrid/input
+
+hadoop fs -mkdir /user/cloudera/hybrid/output
+
+hadoop fs -put /home/cloudera/Desktop/data.txt /user/cloudera/hybrid/input/
+
+hadoop jar /home/cloudera/Desktop/Hybrid.jar hybrid.HybridAlgorithm /user/cloudera/hybrid/input /user/cloudera/hybrid/output/
+
+hadoop fs -ls /user/cloudera/hybrid/output
+
+hadoop fs -cat /user/cloudera/hybrid/output/*

@@ -1,0 +1,11 @@
+hadoop fs -mkdir /user/cloudera/stripealgorithm /user/cloudera/stripealgorithm/input
+
+hadoop fs -mkdir /user/cloudera/stripealgorithm/output
+
+hadoop fs -put /home/cloudera/Desktop/data.txt /user/cloudera/stripealgorithm/input/
+
+hadoop jar /home/cloudera/Desktop/Stripe.jar stripe.StripeAlgorithm /user/cloudera/stripealgorithm/input /user/cloudera/stripealgorithm/output/
+
+hadoop fs -ls /user/cloudera/stripealgorithm/output
+
+hadoop fs -cat /user/cloudera/stripealgorithm/output/*
